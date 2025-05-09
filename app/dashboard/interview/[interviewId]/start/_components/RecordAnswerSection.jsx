@@ -18,6 +18,7 @@ const RecordAnswerSection = ({
   mockInterviewQuestion,
   activeQuestionIndex,
   interviewData,
+  setActiveQuestionIndex,
 }) => {
   const [userAnswer, setUserAnswer] = useState("");
   const { user } = useUser();
@@ -44,11 +45,11 @@ const RecordAnswerSection = ({
     setUserAnswer(transcript);
   }, [results]);
 
-  useEffect(() => {
-    if (!isRecording && userAnswer.length > 10) {
-      UpdateUserAnswer();
-    }
-  }, [userAnswer]);
+  // useEffect(() => {
+  //   if (!isRecording && userAnswer.length > 10) {
+  //     UpdateUserAnswer();
+  //   }
+  // }, [userAnswer]);
 
   const StartStopRecording = async () => {
     if (isRecording) {
@@ -95,12 +96,16 @@ const RecordAnswerSection = ({
     });
 
     if (resp) {
-      toast("User Answer recorded successfully");
+      toast("User answer submitted successfully");
       setUserAnswer("");
       setResults([]);
     }
     setResults([]);
     setLoading(false);
+
+    if (activeQuestionIndex !== mockInterviewQuestion?.length - 1) {
+      setActiveQuestionIndex((prev) => prev + 1);
+    }
   };
 
   if (error) return <p>Web Speech API is not available in this browser 🤷‍</p>;
