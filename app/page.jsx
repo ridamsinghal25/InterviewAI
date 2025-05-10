@@ -28,7 +28,7 @@ export default function HomePage() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Brain className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">Brainly AI</span>
+            <span className="text-xl font-bold">Brainy AI</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link
@@ -161,7 +161,7 @@ export default function HomePage() {
                   Features
                 </Badge>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Why Choose Brainly AI?
+                  Why Choose Brainy AI?
                 </h2>
                 <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Our AI-powered platform helps you prepare for technical
@@ -258,7 +258,7 @@ export default function HomePage() {
                   How It Works
                 </h2>
                 <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Get started with Brainly AI in just a few simple steps.
+                  Get started with Brainy AI in just a few simple steps.
                 </p>
               </div>
             </div>
@@ -314,8 +314,7 @@ export default function HomePage() {
                   Ready to Ace Your Next Interview?
                 </h2>
                 <p className="max-w-[700px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Start practicing with Brainly AI today and land your dream
-                  job.
+                  Start practicing with Brainy AI today and land your dream job.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 mt-6">
@@ -337,7 +336,7 @@ export default function HomePage() {
           <div className="flex items-center gap-2">
             <Brain className="h-5 w-5 text-primary" />
             <p className="text-sm text-muted-foreground">
-              © 2025 Brainly AI. All rights reserved.
+              © 2025 Brainy AI. All rights reserved.
             </p>
           </div>
           <div className="flex items-center gap-4">

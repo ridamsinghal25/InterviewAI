@@ -21,22 +21,22 @@ const StartInterview = ({ params }) => {
     GetInterviewDetails();
   }, []);
 
-  // useEffect(() => {
-  //   function handleVisibilityChange() {
-  //     if (document.visibilityState === "hidden") {
-  //       toast("You left the interview");
-  //       router.push(
-  //         "/dashboard/interview/" + interViewData?.mockId + "/feedback"
-  //       );
-  //     }
-  //   }
+  useEffect(() => {
+    function handleVisibilityChange() {
+      if (document.visibilityState === "hidden") {
+        toast("You left the interview");
+        router.push(
+          "/dashboard/interview/" + interViewData?.mockId + "/feedback"
+        );
+      }
+    }
 
-  //   document.addEventListener("visibilitychange", handleVisibilityChange);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
-  //   return () => {
-  //     document.removeEventListener("visibilitychange", handleVisibilityChange);
-  //   };
-  // }, []);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
 
   const GetInterviewDetails = async () => {
     const result = await db

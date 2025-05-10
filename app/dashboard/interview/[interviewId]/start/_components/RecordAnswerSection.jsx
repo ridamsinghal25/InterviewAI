@@ -45,12 +45,6 @@ const RecordAnswerSection = ({
     setUserAnswer(transcript);
   }, [results]);
 
-  // useEffect(() => {
-  //   if (!isRecording && userAnswer.length > 10) {
-  //     UpdateUserAnswer();
-  //   }
-  // }, [userAnswer]);
-
   const StartStopRecording = async () => {
     if (isRecording) {
       stopSpeechToText();

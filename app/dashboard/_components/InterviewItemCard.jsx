@@ -63,7 +63,7 @@ const InterviewItemCard = ({ interview, setInterviewList }) => {
         <div>
           <h2 className="font-bold text-primary">{interview?.jobPosition}</h2>
           <h2 className="text-sm text-black">
-            Experience: {interview?.jobExperience}
+            Experience: {interview?.jobExperience} year
           </h2>
           <h2 className="text-xs text-gray-400">
             Created At: {interview?.createdAt}
